@@ -1,0 +1,198 @@
+.leftSideNav{
+	margin-top: 50px;
+	visibility: hidden;
+}
+.space{
+	flex: 1 1 auto;
+}
+.span{
+	color: white;
+	font-size: 15px; 
+	padding: 1px;
+	font-family: 'Raleway', sans-serif;
+}
+span{	
+	font-family: 'Raleway', sans-serif;
+}
+.md-button{
+	width: 100%;
+	text-align: justify;
+	color: white;
+	margin-bottom: 7px;
+}
+md-toolbar{
+	min-height: 50px;
+	max-height: 50px;
+	background-color: #9496a3;
+}
+:host /deep/ md-toolbar-row{
+	height: 50px;
+}
+md-icon{
+	color: white;	
+}/*
+md-sidenav-container{
+	background-color: rgba(0,0,0,0) !important;
+}*/
+md-sidenav{
+	background-color: #9496a3;
+}
+hr{
+	margin-right: 6px;
+	margin-left:  8px;
+	margin-top: -2px;
+}
+.md-menu-item{
+	line-height: 0.5px !important;
+	height: 30px !important;
+	text-align: left !important;
+	margin-top: -3px !important;
+	font-size: 1vw !important;
+	/*width: 175px !important;*/
+}
+.md-menu-item-span{
+	margin-left: -10px;
+}
+.menu-item-span{
+	width: 150px !important;
+	height:30px !important;
+	padding: 10px !important;
+	text-align: left !important;
+	font-size: 1vw !important;
+}
+@media only screen and (max-width: 500px) {
+    .hide-on-small-screens {
+        display: none;
+    }
+}
+@media screen and (min-width: 1441px) and (max-width: 1681px) {
+	md-input-container{
+		margin-top: 12px;
+	    font-size: 15px;
+	    color: white;
+	    width: 250px;
+	    margin-right: -5px;
+	}
+	.center{
+		left:39%
+	}
+	.ls{
+		display: none;
+	}
+}
+@media screen and (min-width: 1281px) and (max-width: 1440px) {
+	md-input-container{
+		margin-top: 12px;
+	    font-size: 15px;
+	    color: white;
+	    width: 175px;
+	    margin-right: -5px;	
+	}
+	.center{
+		left:39%
+	}
+	.ls{
+		display: none;
+	}
+}
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+	md-input-container{
+		margin-top: 12px;
+	    font-size: 15px;
+	    color: white;
+	    width: 185px;
+	    margin-right: -5px;
+	}
+	.center{
+		left:39%
+	}
+	.ls{
+		display: none;
+	}
+}
+@media screen and (min-width: 881px) and (max-width: 1024px) {
+	md-input-container{
+		margin-top: 12px;
+	    font-size: 15px;
+	    color: white;
+	    width: 120px;
+	    margin-right: -5px;
+	}
+	.center{
+		left:30%
+	}
+}
+@media screen and (min-width: 750px) and (max-width: 880px) {
+	md-input-container{
+		margin-top: 12px;
+	    font-size: 15px;
+	    color: white;
+	    width: 150px;
+	    margin-right: -5px;
+	}
+	.center{
+		left:39%
+	}
+	.ms{
+		display: none;
+	}
+}
+@media screen and (min-width: 601px) and (max-width: 749px) {
+	md-input-container{
+		margin-top: 12px;
+	    font-size: 15px;
+	    color: white;
+	    width: 120px;
+	    margin-right: -5px;
+	}
+	.center{
+		left:39%
+	}
+	.ms{
+		display: none;
+	}
+}
+@media screen and (min-width: 461px) and (max-width: 600px) {
+	md-input-container{
+		margin-top: 12px;
+	    font-size: 15px;
+	    color: white;
+	    width: 120px;
+	    margin-right: -5px;
+	}
+	.center{
+		left:39%
+	}
+	.ms{
+		display: none;
+	}
+}
+@media screen and (min-width: 400px) and (max-width: 460px) {
+	md-input-container{
+		margin-top: 12px;
+	    font-size: 15px;
+	    color: white;
+	    width: 150px;
+	    margin-right: -5px;
+	}
+	
+}
+@media screen and (min-width: 330px) and (max-width: 399px){	
+	md-input-container{
+		margin-top: 12px;
+	    font-size: 15px;
+	    color: white;
+	    width: 120px;
+	    margin-right: -5px;
+	}
+}
+@media screen and (min-width: 300px) and (max-width: 329px){
+	md-input-container{
+		margin-top: 12px;
+	    font-size: 15px;
+	    color: white;
+	    width: 95px;
+	    margin-right: -5px;
+	}
+	
+}

@@ -1,0 +1,68 @@
+table{
+	font-size: 2vw; 
+	margin-top: 10%;
+}
+.table-1{
+	margin-left: 23%;
+}
+.table-2{
+	margin-left: 19%;
+}
+td{
+	padding-bottom:  5%;
+	padding-left: 10px;
+	margin: 2%; 
+}
+.col-1{
+	padding-right: 50px;
+}
+md-icon{
+	color:blue;
+}
+.rowOneAnim{	
+	animation: 1s rowOneAnim forwards;
+}
+.rowTwoAnim{
+	animation: 2s rowTwoAnim forwards;	
+}
+.rowThreeAnim{
+	animation: 3s rowThreeAnim forwards;	
+}
+@keyframes rowOneAnim {from { opacity:0;
+		transform: translateX(50%);
+	}
+
+	to {
+		opacity: 2;
+		transform: translateX(0,10%);
+	}
+}
+@keyframes rowTwoAnim {from { opacity:0;
+		transform: translateX(-50%);
+	}
+
+	to {
+		opacity: 3;
+		transform: translateX(0);
+	}
+}
+@keyframes rowThreeAnim {from { opacity:0;
+		transform: translateX(50%);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+@media only screen and (max-width: 500px) {
+    .table-1{
+	margin-left: 23%;
+	}
+	.table-2{
+		margin-left: 21%;
+	}
+	.col-1{
+		padding-right: 10px;
+	}
+}

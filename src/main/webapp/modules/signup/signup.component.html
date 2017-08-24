@@ -1,0 +1,61 @@
+<div class="body-padding">
+	<app-header></app-header>
+	<md-card>
+		<md-card-content>
+			<div>
+				<a routerLink="/signup">Free Trial Sign Up</a>
+				<a class="right" routerLink="/signin">Existing User</a>
+			</div>
+			<div>
+				<form [formGroup]="freeSignupForm" class="form" (ngSubmit)="creatAccount(freeSignupForm.value)">		
+					<div>
+						<md-icon>person</md-icon>
+						<md-input-container>			
+							<input mdInput placeholder="First name*" [formControl]="freeSignupForm.controls['firstName']">
+							<md-error *ngIf="freeSignupForm.controls['firstName'].hasError('required')">
+						      First name is <strong>required</strong>
+						    </md-error>
+						</md-input-container>
+					</div>
+					<div>
+						<md-icon>person</md-icon>
+						<md-input-container>			
+							<input mdInput placeholder="Last name" name="lastname" [formControl]="freeSignupForm.controls['lastName']">
+						</md-input-container>
+						<div></div>
+					</div>
+					<div>
+						<md-icon>email</md-icon>
+						<md-input-container>		
+							<input mdInput type="email" placeholder="Business Email*" name="businessEmail" [formControl]="freeSignupForm.controls['businessEmail']">
+							<md-error *ngIf="freeSignupForm.controls['businessEmail'].hasError('pattern')">
+	      						Please enter a valid email address
+	    					</md-error>
+	    					<md-error *ngIf="freeSignupForm.controls['businessEmail'].hasError('required')">
+						     Business Email is <strong>required</strong>
+						    </md-error>
+						</md-input-container>
+					</div>
+					<div>
+						<md-icon>email</md-icon>
+						<md-input-container>		
+							<input mdInput type="email" name="confirmedEmail" placeholder="Confirm Email*" [formControl]="freeSignupForm.controls['confirmedEmail']">						
+							<md-error *ngIf="freeSignupForm.controls['confirmedEmail'].hasError('required')">
+						    	Confirm Email is <strong>required</strong>
+						    </md-error>
+						    <md-error *ngIf="freeSignupForm.controls['businessEmail'].value !== freeSignupForm.controls['confirmedEmail'].value && !freeSignupForm.controls['confirmedEmail'].hasError('required') || freeSignupForm.controls['confirmedEmail'].hasError('pattern') && !freeSignupForm.controls['confirmedEmail'].hasError('required')">
+								Email <strong>Mismatch</strong>
+							</md-error>   					
+						</md-input-container>
+					</div>
+					<div>
+						<p>By creating your account, you agree to Yujaa Trial use <a href="">'Terms & conditions'</a> and the Yujaa <a href="">'privacy policy'</a></p>
+					</div>
+					<md-card-actions>
+						<button md-raised-button type="submit" [disabled]="!freeSignupForm.valid">Create my Free Account</button>
+					</md-card-actions>
+				</form>
+			</div>
+		</md-card-content>		
+	</md-card>
+</div>

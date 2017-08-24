@@ -1,0 +1,161 @@
+ <md-sidenav-container fullscreen>
+	 <md-toolbar>	
+		  <button md-icon-button (click)="sidenav.toggle()">
+		  	<md-icon>view_comfy</md-icon>
+		  </button>  
+		  <a routerLink="/home"><span class="span">Yujaa</span></a>
+		  <button md-icon-button class="center hide-on-small-screens ms" appFullscreen (click)="changeFullScreenIcon()">
+		  	<md-icon *ngIf="!visible">fullscreen<!--zoom_out_map/ open_with --></md-icon>
+		  	<md-icon *ngIf="visible">fullscreen_exit</md-icon> 
+		  </button>  
+		  <span class="space"></span>
+		  <div  *ngIf="hide">
+			  <md-input-container>
+			  	 <input mdInput name="search" placeholder="search">
+			  </md-input-container>
+			  <button md-icon-button (click)="search()">
+			  	<md-icon>close</md-icon>
+			  </button>
+		  </div>
+		  <button md-icon-button (click)="search()" *ngIf="!hide">
+		  	<md-icon>search</md-icon>
+		  </button>
+		  <span class="span hide-on-small-screens">{{expiry}}</span>
+		  <div>
+			  <button md-button [mdMenuTriggerFor]="person">
+			  	<md-icon>person</md-icon>
+			  	<span class="span hide-on-small-screens">{{user}}</span>
+			  </button>
+			  <md-menu #person="mdMenu" [overlapTrigger]="false">
+			  	<button md-menu-item class="md-menu-item">
+			  		<md-icon>settings</md-icon>
+			  		<span class="md-menu-item-span">Settings</span>
+			  	</button>
+			  	<hr>
+			  	<button md-menu-item class="md-menu-item">
+			  		<md-icon>person</md-icon>
+			  		<span class="md-menu-item-span">Profile</span>
+			  	</button>
+			  	<hr>
+			  	<button md-menu-item class="md-menu-item">
+			  		<md-icon>subscriptions</md-icon>
+			  		<span class="md-menu-item-span">Subscriptions</span>
+			  	</button>
+			  	<hr>
+			  	<button md-menu-item (click)="signout()" class="md-menu-item">
+				    <md-icon>lock_outline</md-icon>
+				    <span class="md-menu-item-span">Logout</span>
+				</button>
+			  </md-menu>
+		  </div>
+		  
+		  <button md-icon-button class="hide-on-small-screens">
+		  	<md-icon>apps</md-icon>
+		  </button>
+		  <div>
+			  <button md-icon-button class="hide-on-small-screens ms" [mdMenuTriggerFor]="notifications">
+			  	<md-icon>notifications</md-icon>
+			  </button>
+			  <md-menu #notifications="mdMenu" [overlapTrigger]="false">
+			  	<div>
+				  <span md-menu-item class="menu-item-span">Scheduled maintenance System down on Saturday 11am-2pm</span>
+				</div>
+			  </md-menu>
+		  </div>
+		  <div>
+			  <button md-icon-button class="hide-on-small-screens ms" [mdMenuTriggerFor]="help">
+			  	<md-icon>help</md-icon>
+			  </button>
+			  <md-menu #help="mdMenu" [overlapTrigger]="false">
+			  	<button md-menu-item class="md-menu-item">
+			  		<md-icon>description</md-icon>
+			  		<span class="md-menu-item-span">Documentation</span>			  		
+			  	</button>
+			  	<hr>
+			  	<button md-menu-item class="md-menu-item">
+			  		<md-icon>play_circle_outline</md-icon>
+			  		<span class="md-menu-item-span">Demo play</span>
+			  	</button>
+			  	<hr>
+			  	<button md-menu-item class="md-menu-item">
+			  		<md-icon>group</md-icon>
+			  		<span class="md-menu-item-span">Community</span>
+			  	</button>	
+			  	<hr>
+			  	<button md-menu-item class="md-menu-item">
+			  		<md-icon>live_help</md-icon>
+			  		<span class="md-menu-item-span">Support</span>
+			  	</button>		  		
+			  	<hr>
+			  	<button md-menu-item class="md-menu-item">			  		
+			  		<md-icon>feedback</md-icon>
+			  		<span class="md-menu-item-span">Provide feedback</span>			  		
+			  	</button>
+			  	<hr>
+			  	<button md-menu-item class="md-menu-item">
+			  		<md-icon>info</md-icon>
+			  		<span class="md-menu-item-span">About Yujaa</span>
+			  	</button>
+			  </md-menu>
+		  </div>
+		  <div>
+			  <button md-icon-button [mdMenuTriggerFor]="menu">
+			  	<md-icon>more_vert</md-icon>
+			  </button>
+			  <md-menu #menu="mdMenu" [overlapTrigger]="false" style="top: 64px;">
+				  <button md-menu-item class="md-menu-item">
+				    <md-icon>account_box</md-icon>
+				    <span class="md-menu-item-span">Administration</span>
+				  </button>
+				  <hr>
+				  <button md-menu-item class="md-menu-item">
+				    <md-icon>settings_applications</md-icon>
+				    <span class="md-menu-item-span">User management</span>
+				  </button>
+			  </md-menu>
+		  </div>
+	</md-toolbar>
+  	<md-sidenav #sidenav mode="over" opened="false" class="leftSideNav">
+	    <button md-button class="md-button" (click)="sidenav.toggle()">
+	    	<md-icon>navigate_before</md-icon>
+	    	<span>Close</span>
+	    </button>
+	    <hr>
+	    <button md-button class="md-button">
+	    	<md-icon>add</md-icon>
+	    	<span>Create a story</span>
+	    </button>
+	    <hr>
+	    <button md-button class="md-button">
+	    	<md-icon>list</md-icon>
+	    	<span>List stories</span>
+	    </button>
+	    <hr>
+	    <button md-button class="md-button">
+	    	<md-icon>timeline</md-icon>
+	    	<span>Sample stories</span>
+	    </button>
+	    <hr>
+	    <button md-button class="md-button">
+	    	<md-icon>add</md-icon>
+	    	<span>Create connection</span>
+	    </button>
+	    <hr>
+	    <button md-button class="md-button">
+	    	<md-icon>list</md-icon>
+	    	<span>List connections</span>
+	    </button>
+	    <hr>
+	    <button md-button class="md-button">
+	    	<md-icon>storage</md-icon>
+	    	<span>Sample connections</span>
+	    </button>
+	    <hr>
+	    <button md-button class="md-button">
+	    	<md-icon>apps</md-icon>
+	    	<span>App store</span>
+	    </button>
+	    <hr>
+  	</md-sidenav>
+ 	<app-content></app-content>
+</md-sidenav-container>

@@ -1,0 +1,135 @@
+<div style="text-align:center">
+  <h1>
+    Welcome to {{title}}......!! 
+  </h1>
+</div>
+<div>
+	<table *ngIf="!visible" class="table-1">
+		<tbody>
+			<tr class="rowOneAnim">
+				<td>
+					<button md-fab color="priamry">
+						<md-icon>add</md-icon>
+					</button>
+				</td>
+				<td class="col-1">
+					<span>Create story board</span>
+				</td>
+				<td>
+					<button md-fab color="priamry">
+						<md-icon>add</md-icon>
+					</button>
+				</td>
+				<td>
+					<span>Create connections</span>
+				</td>
+			</tr>
+			<tr class="rowTwoAnim">
+				<td>
+					<button md-fab color="priamry">
+						<md-icon>list</md-icon>
+					</button>
+				</td>
+				<td>
+					<span>List stroies</span>
+				</td>
+				<td>
+					<button md-fab color="priamry">
+						<md-icon>list</md-icon>
+					</button>
+				</td>
+				<td>
+					<span>List connections</span>
+				</td>
+				<td>
+					<button md-icon-button (click)="next()">
+						<md-icon>chevron_right</md-icon>
+					</button>
+				</td>
+			</tr>
+			<tr class="rowThreeAnim">
+				<td>
+					<button md-fab color="priamry">
+						<md-icon>trending_up</md-icon>
+					</button>
+				</td>
+				<td>
+					<span>Sample stroies</span>
+				</td>
+				<td>
+					<button md-fab color="priamry">
+						<md-icon>storage</md-icon>
+					</button>
+				</td>
+				<td>
+					<span>Sample connections</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<table *ngIf="visible" class="table-2">
+		<tbody>
+			<tr class="rowThreeAnim">
+				<td></td>
+				<td>
+					<button md-fab color="priamry">
+						<md-icon>descriptions</md-icon>
+					</button>
+				</td>
+				<td class="col-1">
+					<span>Yujaa Documentation</span>
+				</td>
+				<td>
+					<button md-fab color="priamry">
+						<md-icon>group</md-icon>
+					</button>
+				</td>
+				<td>
+					<span>Yujaa Community</span>
+				</td>
+			</tr>
+			<tr class="rowTwoAnim">
+				<td>
+					<button md-icon-button (click)="next()">
+						<md-icon>chevron_left</md-icon>
+					</button>
+				</td>
+				<td>
+					<button md-fab color="priamry">
+						<md-icon>apps</md-icon>
+					</button>
+				</td>
+				<td>
+					<span>Yujaa Appstore</span>
+				</td>
+				<td>
+					<button md-fab color="priamry">
+						<md-icon>live_help</md-icon>
+					</button>
+				</td>
+				<td>
+					<span>Yujaa Support</span>
+				</td>
+			</tr>
+			<tr class="rowOneAnim">
+				<td></td>
+				<td>
+					<button md-fab color="priamry">
+						<md-icon>feedback</md-icon>
+					</button>
+				</td>
+				<td>
+					<span>Feedback on Yujaa</span>
+				</td>
+				<td>
+					<button md-fab color="priamry">
+						<md-icon>play_circle_outline</md-icon>
+					</button>
+				</td>
+				<td>
+					<span>Demo play</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+<div>
