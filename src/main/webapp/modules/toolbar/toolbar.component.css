@@ -28,6 +28,9 @@ md-toolbar{
 :host /deep/ md-toolbar-row{
 	height: 50px;
 }
+::ng-deep .mat-drawer-backdrop.mat-drawer-shown{
+	visibility: hidden !important;
+}
 md-icon{
 	color: white;	
 }/*
