@@ -48,10 +48,33 @@
 				</button>
 			  </md-menu>
 		  </div>
-		  
-		  <button md-icon-button class="hide-on-small-screens">
-		  	<md-icon>apps</md-icon>
-		  </button>
+		  <div>
+			  <button md-icon-button class="hide-on-small-screens" [mdMenuTriggerFor]="apps">
+			  	<md-icon>apps</md-icon>
+			  </button>
+			  <md-menu #apps="mdMenu" [overlapTrigger]="false">
+			  	<div style="padding-bottom: 7%;">
+				  	<button md-menu-item class="app-store-home">
+				  		<md-icon class="app-store-home-icon">home</md-icon><br>
+				  		<span class="app-store-home-span">Home</span>
+				  	</button>
+				  	<button md-menu-item class="app-store-app">
+				  		<md-icon class="app-store-app-icon">apps</md-icon><br>
+				  		<span>App store</span>
+				  	</button>
+			  	</div>
+			  	<div>
+				  	<button md-menu-item class="app-store-data-center">
+				  		<md-icon class="app-store-data-center-icon">storage</md-icon><br>
+				  		<span>Data center</span>
+				  	</button>
+				  	<button md-menu-item class="app-store-stories">
+				  		<md-icon class="app-store-stories-icon">trending_up</md-icon><br>
+				  		<span class="app-store-stories-span">Stories</span>
+				  	</button>
+				</div>
+			  </md-menu>
+		  </div>
 		  <div>
 			  <button md-icon-button class="hide-on-small-screens ms" [mdMenuTriggerFor]="notifications">
 			  	<md-icon>notifications</md-icon>
@@ -115,11 +138,11 @@
 			  </md-menu>
 		  </div>
 	</md-toolbar>
-  	<md-sidenav #sidenav mode="over" opened="false" class="leftSideNav">
+  	<md-sidenav #sidenav mode="over" opened="false" class="leftSideNav"><!-- 
 	    <button md-button class="md-button" (click)="sidenav.toggle()">
 	    	<md-icon>navigate_before</md-icon>
 	    	<span>Close</span>
-	    </button>
+	    </button> -->
 	    <hr>
 	    <button md-button class="md-button">
 	    	<md-icon>add</md-icon>

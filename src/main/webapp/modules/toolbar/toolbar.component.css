@@ -1,6 +1,5 @@
 .leftSideNav{
-	margin-top: 50px;
-	visibility: hidden;
+	top:52px;
 }
 .space{
 	flex: 1 1 auto;
@@ -29,8 +28,61 @@ md-toolbar{
 	height: 50px;
 }
 ::ng-deep .mat-drawer-backdrop.mat-drawer-shown{
-	visibility: hidden !important;
+	/*visibility: hidden !important;*/
+	background-color: rgba(0,0,0,0) !important;
 }
+/*App Menu CSS*/
+.app-store-home{
+	width: 51% !important;
+	line-height: 0.5px !important;
+	font-size: 0.8vw !important;
+	text-align: left !important;
+}
+.app-store-home-icon{
+	margin-bottom: 10px;
+	margin-left: 13.5%;
+}
+.app-store-home-span{
+	margin-left: 12.5%;
+}
+.app-store-app{
+	width: 82px !important;
+	margin-top: -49px !important;
+	margin-left: 51% !important;
+	line-height: 0.5px !important;
+	font-size: 0.8vw !important;
+	text-align: left !important;
+}
+.app-store-app-icon{
+	margin-bottom: 8px;
+	margin-left: 19.5%;
+}
+.app-store-data-center{
+	width: 51% !important;
+	line-height: 0.5px !important;
+	font-size: 0.8vw !important;
+	text-align: left !important;
+}
+.app-store-data-center-icon{
+	margin-bottom: 10px;
+	margin-left: 15.5%;
+}
+.app-store-stories{
+	width: 82px !important;
+	margin-top: -49px !important;
+	margin-left: 86px !important;
+	line-height: 0.5px !important;
+	font-size: 0.8vw !important;
+	text-align: left !important;
+}
+.app-store-stories-icon{
+	margin-bottom: 8px;
+	margin-left: 19.5%;
+}
+.app-store-stories-span{
+	margin-left: 12.5%;
+}
+/*end css*/
 md-icon{
 	color: white;	
 }/*

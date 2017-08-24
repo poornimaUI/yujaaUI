@@ -1,8 +1,3 @@
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}......!! 
-  </h1>
-</div>
 <div>
 	<table *ngIf="!visible" class="table-1">
 		<tbody>
@@ -31,7 +26,7 @@
 					</button>
 				</td>
 				<td>
-					<span>List stroies</span>
+					<span>List stories</span>
 				</td>
 				<td>
 					<button md-fab color="priamry">
@@ -42,7 +37,7 @@
 					<span>List connections</span>
 				</td>
 				<td>
-					<button md-icon-button (click)="next()">
+					<button md-icon-button class="slide-right" (click)="next()">
 						<md-icon>chevron_right</md-icon>
 					</button>
 				</td>
@@ -54,7 +49,7 @@
 					</button>
 				</td>
 				<td>
-					<span>Sample stroies</span>
+					<span>Sample stories</span>
 				</td>
 				<td>
 					<button md-fab color="priamry">
@@ -90,7 +85,7 @@
 			</tr>
 			<tr class="rowTwoAnim">
 				<td>
-					<button md-icon-button (click)="next()">
+					<button md-icon-button class="slide-left" (click)="next()">
 						<md-icon>chevron_left</md-icon>
 					</button>
 				</td>

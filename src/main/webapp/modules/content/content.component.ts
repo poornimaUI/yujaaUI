@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ContentComponent implements OnInit {
 
   public visible = false;
-  title = 'Siri World ';
+  title = 'Yujaa ';
   constructor() { }
 
   ngOnInit() {
