@@ -31,17 +31,14 @@
 			  		<md-icon>settings</md-icon>
 			  		<span class="md-menu-item-span">Settings</span>
 			  	</button>
-			  	<hr>
 			  	<button md-menu-item class="md-menu-item">
 			  		<md-icon>person</md-icon>
 			  		<span class="md-menu-item-span">Profile</span>
 			  	</button>
-			  	<hr>
 			  	<button md-menu-item class="md-menu-item">
 			  		<md-icon>subscriptions</md-icon>
 			  		<span class="md-menu-item-span">Subscriptions</span>
 			  	</button>
-			  	<hr>
 			  	<button md-menu-item (click)="signout()" class="md-menu-item">
 				    <md-icon>lock_outline</md-icon>
 				    <span class="md-menu-item-span">Logout</span>
@@ -52,27 +49,31 @@
 			  <button md-icon-button class="hide-on-small-screens" [mdMenuTriggerFor]="apps">
 			  	<md-icon>apps</md-icon>
 			  </button>
-			  <md-menu #apps="mdMenu" [overlapTrigger]="false">
-			  	<div style="padding-bottom: 7%;">
-				  	<button md-menu-item class="app-store-home">
-				  		<md-icon class="app-store-home-icon">home</md-icon><br>
-				  		<span class="app-store-home-span">Home</span>
-				  	</button>
-				  	<button md-menu-item class="app-store-app">
-				  		<md-icon class="app-store-app-icon">apps</md-icon><br>
-				  		<span>App store</span>
-				  	</button>
-			  	</div>
-			  	<div>
-				  	<button md-menu-item class="app-store-data-center">
-				  		<md-icon class="app-store-data-center-icon">storage</md-icon><br>
-				  		<span>Data center</span>
-				  	</button>
-				  	<button md-menu-item class="app-store-stories">
-				  		<md-icon class="app-store-stories-icon">trending_up</md-icon><br>
-				  		<span class="app-store-stories-span">Stories</span>
-				  	</button>
-				</div>
+			  <md-menu #apps="mdMenu" [overlapTrigger]="false" xPosition="before">
+				<table>
+					<tbody>
+						<tr class="border-bottom">
+							<td class="border-right">
+								<md-icon>home</md-icon><br>
+								<span>Home</span>
+							</td>
+							<td>
+								<md-icon>apps</md-icon><br>
+								<span>App store</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="border-right">
+								<md-icon>storage</md-icon><br>
+								<span>Data center</span>
+							</td>
+							<td>
+								<md-icon>trending_up</md-icon><br>
+								<span>Stories</span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
 			  </md-menu>
 		  </div>
 		  <div>
@@ -94,27 +95,22 @@
 			  		<md-icon>description</md-icon>
 			  		<span class="md-menu-item-span">Documentation</span>			  		
 			  	</button>
-			  	<hr>
 			  	<button md-menu-item class="md-menu-item">
 			  		<md-icon>play_circle_outline</md-icon>
 			  		<span class="md-menu-item-span">Demo play</span>
 			  	</button>
-			  	<hr>
 			  	<button md-menu-item class="md-menu-item">
 			  		<md-icon>group</md-icon>
 			  		<span class="md-menu-item-span">Community</span>
-			  	</button>	
-			  	<hr>
+			  	</button>
 			  	<button md-menu-item class="md-menu-item">
 			  		<md-icon>live_help</md-icon>
 			  		<span class="md-menu-item-span">Support</span>
-			  	</button>		  		
-			  	<hr>
+			  	</button>
 			  	<button md-menu-item class="md-menu-item">			  		
 			  		<md-icon>feedback</md-icon>
 			  		<span class="md-menu-item-span">Provide feedback</span>			  		
 			  	</button>
-			  	<hr>
 			  	<button md-menu-item class="md-menu-item">
 			  		<md-icon>info</md-icon>
 			  		<span class="md-menu-item-span">About Yujaa</span>
@@ -130,7 +126,6 @@
 				    <md-icon>account_box</md-icon>
 				    <span class="md-menu-item-span">Administration</span>
 				  </button>
-				  <hr>
 				  <button md-menu-item class="md-menu-item">
 				    <md-icon>settings_applications</md-icon>
 				    <span class="md-menu-item-span">User management</span>
@@ -143,42 +138,34 @@
 	    	<md-icon>navigate_before</md-icon>
 	    	<span>Close</span>
 	    </button> -->
-	    <hr>
 	    <button md-button class="md-button">
 	    	<md-icon>add</md-icon>
 	    	<span>Create a story</span>
-	    </button>
-	    <hr>
+	    </button><br>
 	    <button md-button class="md-button">
 	    	<md-icon>list</md-icon>
 	    	<span>List stories</span>
-	    </button>
-	    <hr>
+	    </button><br>
 	    <button md-button class="md-button">
 	    	<md-icon>timeline</md-icon>
 	    	<span>Sample stories</span>
-	    </button>
-	    <hr>
+	    </button><br>
 	    <button md-button class="md-button">
 	    	<md-icon>add</md-icon>
 	    	<span>Create connection</span>
-	    </button>
-	    <hr>
+	    </button><br>
 	    <button md-button class="md-button">
 	    	<md-icon>list</md-icon>
 	    	<span>List connections</span>
-	    </button>
-	    <hr>
+	    </button><br>
 	    <button md-button class="md-button">
 	    	<md-icon>storage</md-icon>
 	    	<span>Sample connections</span>
-	    </button>
-	    <hr>
+	    </button><br>
 	    <button md-button class="md-button">
 	    	<md-icon>apps</md-icon>
 	    	<span>App store</span>
-	    </button>
-	    <hr>
+	    </button><br>
   	</md-sidenav>
  	<app-content></app-content>
 </md-sidenav-container>

@@ -1,8 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+*{
+	font-family: 'Raleway', sans-serif;
+}
 html{
-	height:100%;
-	font-family: 'Raleway', sans-serif;	
+	height:100%;	
 	animation: 2s alertAnim forwards;
 }
 body{
@@ -21,17 +23,16 @@ body{
 
 }
 form{
-	font-family: 'Raleway', sans-serif;
 	text-align: center;
 }
 a {
 	text-decoration: none;
-	font-family: 'Raleway', sans-serif;	
 }
-
+.pull-right{
+	float: right;
+}
 md-error {
 	animation: 1s alertAnim forwards;
-	font-family: 'Raleway', sans-serif;	
 }
 
 @media screen and (min-width: 1441px) and (max-width: 1681px) {

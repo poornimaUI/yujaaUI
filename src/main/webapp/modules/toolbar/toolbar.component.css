@@ -1,5 +1,5 @@
 .leftSideNav{
-	top:52px;
+	top:51px;
 }
 .space{
 	flex: 1 1 auto;
@@ -10,7 +10,12 @@
 	padding: 1px;
 	font-family: 'Raleway', sans-serif;
 }
-span{	
+.md-button{
+	border-bottom: 1px solid white; 
+	margin-top: -5px;
+}
+span{
+	color: white !important;	
 	font-family: 'Raleway', sans-serif;
 }
 .md-button{
@@ -18,6 +23,23 @@ span{
 	text-align: justify;
 	color: white;
 	margin-bottom: 7px;
+}
+table{
+	border-collapse: collapse;
+	width: 100%;
+	margin-top: -10px;
+}
+.border-bottom{
+	border-bottom: 1px solid white;
+}
+td{
+	padding: 5px;
+	font-size: 9px;
+	width: 55px; 
+	text-align: center;
+}
+.border-right {
+	border-right: 1px solid white;
 }
 md-toolbar{
 	min-height: 50px;
@@ -31,8 +53,12 @@ md-toolbar{
 	/*visibility: hidden !important;*/
 	background-color: rgba(0,0,0,0) !important;
 }
+::ng-deep .mat-menu-content{
+	padding-bottom: 0px !important;
+	background-color: #9496A3;
+}
 /*App Menu CSS*/
-.app-store-home{
+/*.app-store-home{
 	width: 51% !important;
 	line-height: 0.5px !important;
 	font-size: 0.8vw !important;
@@ -81,10 +107,10 @@ md-toolbar{
 }
 .app-store-stories-span{
 	margin-left: 12.5%;
-}
+}*/
 /*end css*/
 md-icon{
-	color: white;	
+	color: white !important;	
 }/*
 md-sidenav-container{
 	background-color: rgba(0,0,0,0) !important;
@@ -92,17 +118,13 @@ md-sidenav-container{
 md-sidenav{
 	background-color: #9496a3;
 }
-hr{
-	margin-right: 6px;
-	margin-left:  8px;
-	margin-top: -2px;
-}
+
 .md-menu-item{
 	line-height: 0.5px !important;
-	height: 30px !important;
+	height: 35px !important;
 	text-align: left !important;
-	margin-top: -3px !important;
 	font-size: 1vw !important;
+	border-bottom: 1px solid white;
 	/*width: 175px !important;*/
 }
 .md-menu-item-span{
