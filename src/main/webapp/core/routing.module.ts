@@ -7,6 +7,8 @@ import { PasswordComponent } from '../modules/password/password.component';
 import { SigninComponent } from '../modules/signin/signin.component';
 import { SignupComponent } from '../modules/signup/signup.component';
 import { ToolbarComponent } from '../modules/toolbar/toolbar.component';
+import { UserProfileComponent } from '../modules/userProfile/userProfile.component';
+import { ContentComponent } from '../modules/content/content.component';
 
 const routes: Routes = [
   {
@@ -31,7 +33,17 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    component: ToolbarComponent
+    component: ToolbarComponent,
+    children: [
+      {
+        path: '',
+        component: ContentComponent
+      },
+      {
+        path: 'userprofile',
+        component: UserProfileComponent
+      }
+    ]
   },
   {
     path: 'resetpassword',

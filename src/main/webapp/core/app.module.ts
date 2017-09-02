@@ -10,7 +10,7 @@ import { RoutingModule } from './routing.module';
 import { Data } from '../modules/data/data';
 
 import { MailSendService } from '../modules/services/mailSendService/mailSend.service';
-
+import { TabSwitchingService } from '../modules/services/tabSwitching.service';
 import { AppComponent } from './app.component';
 import { ContentComponent } from '../modules/content/content.component';
 import { ForgotPasswordComponent } from '../modules/forgot-password/forgot-password.component';
@@ -21,6 +21,8 @@ import { SigninComponent } from '../modules/signin/signin.component';
 import { SignupComponent } from '../modules/signup/signup.component';
 import { ToolbarComponent } from '../modules/toolbar/toolbar.component';
 import { VerifyDialog } from '../modules/signup/signup.component';
+import { UserProfileComponent } from '../modules/userProfile/userProfile.component';
+
 
 @NgModule({
   declarations: [
@@ -33,6 +35,7 @@ import { VerifyDialog } from '../modules/signup/signup.component';
     SigninComponent,
     SignupComponent,
     ToolbarComponent,
+    UserProfileComponent,
     VerifyDialog,
   ],
   imports: [
@@ -44,8 +47,8 @@ import { VerifyDialog } from '../modules/signup/signup.component';
     HttpModule,
     RoutingModule
   ],
-  providers: [MailSendService,Data],
+  providers: [MailSendService,Data,TabSwitchingService],
   bootstrap: [AppComponent],
   entryComponents: [VerifyDialog]
 })
-export class AppModule { }
+export class AppModule {}

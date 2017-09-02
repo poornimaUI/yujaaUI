@@ -12,6 +12,7 @@ body{
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 }
+
 @keyframes alertAnim {from { opacity:0;
 		transform: translateY(-20px);
 	}
@@ -27,6 +28,7 @@ form{
 }
 a {
 	text-decoration: none;
+	outline: none !important;
 }
 .pull-right{
 	float: right;

@@ -1,0 +1,103 @@
+<md-tab-group [selectedIndex]="selectedIndex">
+  <md-tab>
+    <ng-template md-tab-label>
+      Profile
+    </ng-template>
+    <div class="user-profile">
+          <img src="{{src}}" width="200" height="200" alt="user-profile" style="padding: 1rem;">
+          <div class="user-contact-info">
+            <ul>
+              <li>
+                <h4>Naveen Sain</h4>
+                <p>Software Engineer</p>
+              </li>
+              <li>
+                <div class="contact-list">
+                  <md-icon>email</md-icon>
+                  <strong>E-mail</strong>
+                </div>
+                <a href="mailto:abcd@gmail.com">: abcd@gmaiil.com</a>
+              </li>
+              <li>
+                <div class="contact-list">
+                  <md-icon>call</md-icon>
+                  <strong>Phone</strong>
+                </div>
+                <a>: +123 456 789890</a>
+              </li>
+              <li>
+                <div class="contact-list">
+                  <md-icon>map</md-icon>
+                  <strong>City</strong>
+                </div>
+                <a>: Hyderabad</a>
+              </li>
+              <li>
+                <div class="contact-list">
+                  <md-icon>language</md-icon>
+                  <strong>Country</strong>
+                </div>
+                <a>: India</a>
+              </li>
+              <li>
+                <div class="contact-list">
+                  <md-icon>place</md-icon>
+                  <strong>Address</strong>
+                </div>
+                <a>: 5th Floor, Modern Profound Tech Park, Hi-Tech City, Hyderabad, India</a>
+              </li>
+            </ul>
+            <div class="user-social-sites">
+              <ul>
+                <li>
+                  <a href="">
+                    <md-icon>home</md-icon>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <md-icon>email</md-icon>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+      </div>
+  </md-tab>
+  <md-tab>
+    <ng-template md-tab-label>
+      Settings
+    </ng-template>
+    <div style="padding: 1rem;">
+          <h4>Settings</h4> 
+        </div>
+        <div style="padding-left: 1rem;">     
+          <md-icon>error</md-icon>
+          <span>Looking for Security &amp; Privacy settings? They've moved up a bit.<a href="">Show me</a></span>
+        </div>
+        <div>
+          <a href=""><md-card class="settings-card">
+            <h5>Theme</h5>
+            <span>choose your favorite theme.</span>
+          </md-card></a>
+          <a href=""><md-card class="settings-card">
+            <h5>Start page</h5>
+            <span>Change where you land when you sign in.</span>
+          </md-card></a>
+          <a href=""><md-card class="settings-card">
+            <h5>Software</h5>
+            <span>Install software</span>
+          </md-card></a>
+          <a href=""><md-card class="settings-card">
+            <h5>Language</h5>
+            <span>Select your language</span>
+          </md-card></a>
+        </div>
+  </md-tab>
+  <md-tab>
+    <ng-template md-tab-label>
+      Subscriptions
+    </ng-template>
+    <h1>User Subscriptions</h1>
+  </md-tab>
+</md-tab-group>

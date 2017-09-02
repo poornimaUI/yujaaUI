@@ -1,0 +1,65 @@
+::ng-deep .mat-drawer-content{
+	overflow: hidden !important;
+}
+::ng-deep .mat-tab-label, .mat-tab-link{
+	font-family: 'Raleway', sans-serif !important;
+}
+@media only screen and (max-width: 650px) {
+	::ng-deep .mat-drawer-content{
+		overflow-x: hidden !important; 
+		overflow-y: overlay !important;
+	}
+}
+h4{
+	margin-bottom: -4px;
+}
+.mat-card{
+	margin: 1rem;
+    border-radius: 8px;
+    padding: .875rem 1.5rem;
+    overflow: hidden;
+}
+.user-profile{
+	display: flex;
+    flex-flow: row wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    place-content: stretch flex-start;
+    align-items: stretch;
+    box-sizing: border-box;
+    -webkit-box-pack: start;
+    -webkit-box-align: stretch;
+}
+.user-contact-info{
+	max-width: 80%;
+    flex: 1 1 80%;
+    box-sizing: border-box;
+    -webkit-box-flex: 1;
+}
+.user-social-sites{
+	margin-bottom: 1.5rem;
+}
+.user-social-sites li{
+	display: inline-block;
+}
+.contact-list{
+	 min-width: 120px;
+    float: left;
+}
+.settings-card{
+	padding: 1rem;
+    width: 200px;
+    height: 210px;
+    display: inline-block;
+}
+ul{
+	list-style: none;
+    padding-left: 2rem;
+    margin: 0;
+}
+li{
+	margin-bottom: 1rem;
+}
+md-icon{
+	color: #9496a3 !important;
+}

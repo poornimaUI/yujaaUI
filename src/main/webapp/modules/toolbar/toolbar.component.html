@@ -1,5 +1,5 @@
- <md-sidenav-container fullscreen>
-	 <md-toolbar>	
+<md-sidenav-container fullscreen>
+		<md-toolbar>	
 		  <button md-icon-button (click)="sidenav.toggle()">
 		  	<md-icon>view_comfy</md-icon>
 		  </button>  
@@ -27,15 +27,15 @@
 			  	<span class="span hide-on-small-screens">{{user}}</span>
 			  </button>
 			  <md-menu #person="mdMenu" [overlapTrigger]="false">
-			  	<button md-menu-item class="md-menu-item">
-			  		<md-icon>settings</md-icon>
-			  		<span class="md-menu-item-span">Settings</span>
-			  	</button>
-			  	<button md-menu-item class="md-menu-item">
+			  	<button md-menu-item class="md-menu-item" (click)="openProfileTab()">
 			  		<md-icon>person</md-icon>
 			  		<span class="md-menu-item-span">Profile</span>
 			  	</button>
-			  	<button md-menu-item class="md-menu-item">
+			  	<button md-menu-item class="md-menu-item" (click)="openSettingsTab()">
+			  		<md-icon>settings</md-icon>
+			  		<span class="md-menu-item-span">Settings</span>
+			  	</button>
+			  	<button md-menu-item class="md-menu-item" (click)="openSubscriptionsTab()">
 			  		<md-icon>subscriptions</md-icon>
 			  		<span class="md-menu-item-span">Subscriptions</span>
 			  	</button>
@@ -77,14 +77,14 @@
 			  </md-menu>
 		  </div>
 		  <div>
-			  <button md-icon-button class="hide-on-small-screens ms" [mdMenuTriggerFor]="notifications">
+			  <button md-icon-button class="hide-on-small-screens ms" (click)="rightSidenav.toggle()"> <!-- [mdMenuTriggerFor]="notifications"> -->
 			  	<md-icon>notifications</md-icon>
-			  </button>
+			  </button><!-- 
 			  <md-menu #notifications="mdMenu" [overlapTrigger]="false">
 			  	<div>
 				  <span md-menu-item class="menu-item-span">Scheduled maintenance System down on Saturday 11am-2pm</span>
 				</div>
-			  </md-menu>
+			  </md-menu> -->
 		  </div>
 		  <div>
 			  <button md-icon-button class="hide-on-small-screens ms" [mdMenuTriggerFor]="help">
@@ -167,5 +167,31 @@
 	    	<span>App store</span>
 	    </button><br>
   	</md-sidenav>
- 	<app-content></app-content>
-</md-sidenav-container>
+  	<md-sidenav align="end" #rightSidenav mode="over" opened="false" class="rightSideNav">
+  		<div class="notification">
+  			<span>Notifications</span>
+  		</div>
+  		<md-nav-list class="notification-list" role="listitem" routerlinkactive="open">
+  			<a href="/">
+	  			<md-list-item class="notification-item">
+		  			<div class="notification-content">
+		  				<span class="notification-text">Scheduled maintenance System down on Saturday 11am-2pm</span><br>
+		  				<small>1min ago</small>
+		  			</div>
+	  			</md-list-item>
+	  		</a>
+	  		<a href="/">
+	  			<md-list-item class="notification-item">
+		  			<div class="notification-content">
+		  				<span class="notification-text">Scheduled maintenance System down on Saturday 11am-2pm</span><br>
+		  				<small>1min ago</small>
+		  			</div>
+	  			</md-list-item>
+	  		</a>
+	  		<button md-raised-button class="clear-notify">Clear all notifications</button>
+  		</md-nav-list>
+  	</md-sidenav>
+  	<div>
+  		<router-outlet></router-outlet>
+  	</div>
+ </md-sidenav-container>
