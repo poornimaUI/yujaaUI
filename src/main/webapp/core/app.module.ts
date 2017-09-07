@@ -22,6 +22,7 @@ import { SignupComponent } from '../modules/signup/signup.component';
 import { ToolbarComponent } from '../modules/toolbar/toolbar.component';
 import { VerifyDialog } from '../modules/signup/signup.component';
 import { UserProfileComponent } from '../modules/userProfile/userProfile.component';
+import { PricingComponent } from '../modules/pricing/pricing.component';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { UserProfileComponent } from '../modules/userProfile/userProfile.compone
     ToolbarComponent,
     UserProfileComponent,
     VerifyDialog,
+    PricingComponent
   ],
   imports: [
     BrowserModule,

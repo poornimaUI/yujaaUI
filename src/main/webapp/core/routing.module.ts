@@ -9,14 +9,15 @@ import { SignupComponent } from '../modules/signup/signup.component';
 import { ToolbarComponent } from '../modules/toolbar/toolbar.component';
 import { UserProfileComponent } from '../modules/userProfile/userProfile.component';
 import { ContentComponent } from '../modules/content/content.component';
+import { PricingComponent } from '../modules/pricing/pricing.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: SignupComponent
+    component: PricingComponent
   },
- {
-    path: 'signup',
+  {
+   path: 'signup',
     component: SignupComponent
   },
   {
@@ -32,7 +33,7 @@ const routes: Routes = [
     component: ForgotPasswordComponent
   },
   {
-    path: 'home',
+    path: 'user',
     component: ToolbarComponent,
     children: [
       {
@@ -40,7 +41,7 @@ const routes: Routes = [
         component: ContentComponent
       },
       {
-        path: 'userprofile',
+        path: 'profile',
         component: UserProfileComponent
       }
     ]
